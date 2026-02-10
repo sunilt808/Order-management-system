@@ -1,0 +1,6 @@
+com\company\oms\Item.class
+com\company\oms\OrderService.class
+com\company\oms\Order.class
+com\company\oms\OrderManagementApp.class
+com\company\oms\OrderProcessingException.class
+com\company\oms\OrderResult.class
