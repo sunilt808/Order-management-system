@@ -1,16 +1,14 @@
 pipeline {
     agent any
 
-    stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/sunilt808/Order-management-system.git', branch: 'main'
-            }
-        }
+    tools {
+        jdk 'jdk21'
+    }
 
+    stages {
         stage('Build & Test') {
             steps {
-                sh './gradlew clean test build'
+                bat 'gradlew clean test build'
             }
         }
 
