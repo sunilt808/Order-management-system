@@ -12,9 +12,9 @@ pipeline {
             }
         }
 
-        stage('Publish TestNG Report') {
+        stage('Publish Test Results') {
             steps {
-                publishTestNGResults testResultsPattern: 'build/test-results/testng-results.xml'
+                junit 'build/test-results/test/*.xml'
             }
         }
     }
