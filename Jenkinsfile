@@ -1,8 +1,11 @@
 pipeline {
     agent any
 
-    stages {
+    tools {
+        jdk 'jdk21'
+    }
 
+    stages {
         stage('Build & Test') {
             steps {
                 bat 'gradlew clean test build'
